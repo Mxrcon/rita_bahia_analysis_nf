@@ -92,17 +92,6 @@ process MTBSEQ_COHORT {
     mkdir Groups && MTBseq --step TBgroups --samples ${samples_tsv_ch} --project ${params.mtbseq_project_name}
     """
 
-    stub:
-
-    """
-    echo gatk-register ${gatk_jar}
-    export USER=$USER
-
-    mkdir Joint
-    mkdir Amend 
-    mkdir Groups
-    """
-
 }
 
 
